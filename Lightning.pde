@@ -7,6 +7,7 @@ void setup()
   noLoop();
 }
 void draw(){
+  
 int startX;
 int startY;
 int endX;
@@ -18,15 +19,18 @@ endX = 150;
 endY = 0;
 
 stroke(0);
- 
-if (press>=15){
+// for (float b = 0; b<300; b++){
+ float b = 150;
+//frameRate(1);
+   if (press>15){
   fill(100, 67, 13);
-  arc(150, 150, 124, 100, 0, 3.14);
-  line(150, 85, 150, 150);
+  arc(b, 150, 124, 100, 0, 3.14);
+  line(b, 85, b, 150);
   fill(245, 45, 45);
-  triangle(150, 85, 150, 125, 190, 105);
+  triangle(b, 85, b, 125, b+40, 105);
 
 } 
+// }
 
 stroke((int)(Math.random()*256), (int)(Math.random()*256), (int)(Math.random()*256));
 while(startX+endX<=300){
