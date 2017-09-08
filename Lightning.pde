@@ -13,13 +13,13 @@ int endX;
 int endY;
 
 startX = 0;
-startY = ((int)(Math.random()*150)+150);
+startY = ((int)(Math.random()*150)+180);
 endX = 150;
 endY = 0;
 
 stroke(0);
  
-if (press==15){
+if (press>15){
   fill(100, 67, 13);
   arc(150, 150, 124, 100, 0, 3.14,CHORD);
   line(150, 85, 150, 150);
