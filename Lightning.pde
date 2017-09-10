@@ -34,8 +34,10 @@ noStroke();
 stroke(0);
 // for (float b = 0; b<300; b++){
  float b = 150;
+  float fx = (float)(Math.random()*240)+30;
+  float fy = (float)(Math.random()*150)+170;
 //frameRate(1);
-   if (press>15){
+   if (press>5){
     line(b, 85, b, 150);
      noStroke();
   fill(100, 67, 13);
@@ -43,7 +45,14 @@ stroke(0);
   
   fill(245, 45, 45);
   triangle(b, 85, b, 125, b+40, 105);
-
+  
+  fill(222, 22, 199);
+  ellipse(fx, fy, 40, 18);
+  triangle(fx+20, fy, fx+30, fy-10, fx+30, fy+10);
+  stroke(0);
+  line(fx-15, fy-7, fx-5, fy+2);
+  line(fx-5, fy-7, fx-15, fy+2);
+  
 } 
 // }
 
@@ -61,7 +70,7 @@ line(startX, startY, startX+endX, startY+endY);
 }        
 
 void mousePressed(){
-  println(press);
+  //println(press);
   redraw();
   
   press ++;
